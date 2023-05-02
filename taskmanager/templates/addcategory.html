@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+
+{% block content%}
+<div class="row card-panel">
+    <form class="col s12" method="POST" action="{{url_for('addcategory')}}">
+        <div class="row">
+            <div class="input-field col s12">
+                <input name="category_name" id="category_name" type="text" class="validate">
+                <label for="category_name">Add category</label>
+            </div>
+
+        </div>
+        <!--sub mit button-->
+        <div class="row">
+            <div class="input-field col s12 center-align">
+                <button type="submit">
+                    Add category
+                </button>
+            </div>
+
+        </div>
+
+    </form>
+</div>
+
+{% endblock %}
