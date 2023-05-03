@@ -29,10 +29,10 @@ def addcategory():
     return render_template("addcategory.html")
 
 
-@app.route("/editcategory", methods=['GET','POST'])
-def editcategory():
+@app.route("/editcategory/<int:category_id>", methods=['GET','POST'])
+def editcategory(category_id):
     if request.method =="POST":
-        category = Category.query.get_or_404()
+        category = Category.query.get_or_404(category_id)
        
         return render_template("editcategory.html")
     return render_template("editcategory.html")
